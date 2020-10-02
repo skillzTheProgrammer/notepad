@@ -37,21 +37,12 @@ export default function Register({history}) {
 
     }
 
-    // useEffect(()=>{
-    //     const userData = JSON.parse(localStorage.getItem('userData'))
-        
-    //         const username = userData.username.length < 0
-    //         const password = userData.password.length < 0
-    //         console.log(userData)
-    //         console.log(history)
-    //         console.log(username)
-    //         if(username && password){
-    //             history.push('/login')
-                
-       
-    //     }
-        
-    // },[])
+    useEffect(()=>{
+        if(userData.username && userData.password){
+            history.push('/login')
+        }
+    })
+
 
     return (
         <NoteContainer>
